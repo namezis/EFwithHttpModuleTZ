@@ -41,5 +41,18 @@ namespace SampleDAL.Repositories
                       };
             return qry.ToList();
         }
+
+        public IEnumerable<SampleDAL.Entities.EmployeeLong> GetEmployeesLong()
+        {
+            var qry = from r in ctx.Employees
+                      select new SampleDAL.Entities.EmployeeLong
+                      {
+                          FirstName = r.FirstName,
+                          LastName = r.LastName,
+                          Address = r.Address,
+                          City = r.City
+                      };
+            return qry.ToList();
+        }
     }
 }

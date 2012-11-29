@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SampleDAL.Entities
 {
-    class EmployeeLong
+    public class EmployeeLong
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

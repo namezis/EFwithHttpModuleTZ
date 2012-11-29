@@ -11,8 +11,11 @@ namespace EFwithHttpModuleTest1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvCustomers.DataSource = new SampleDAL.Repositories.EmployeeRepository().GetEmployeesShort();
-            gvCustomers.DataBind();
+            gvEmployeeShort.DataSource = new SampleDAL.Repositories.EmployeeRepository().GetEmployeesShort();
+            gvEmployeeShort.DataBind();
+
+            gvEmployeeLong.DataSource = new SampleDAL.Repositories.EmployeeRepository().GetEmployeesLong();
+            gvEmployeeLong.DataBind();
         }
     }
 }
